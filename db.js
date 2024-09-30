@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 
 //Create A MongoDb Url
+require('dotenv').config();
 
-const MongoURL = "mongodb://localhost:27017/pmartstore"
+
+const MongoURL = process.env.DB_URL
 
 
 // Connect The MongoDB

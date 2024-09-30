@@ -1,6 +1,10 @@
 const express = require('express')
 const app = express()
 const db = require("./db")
+require('dotenv').config();
+
+const PORTL = process.env.PORT || 8000;
+
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
@@ -9,7 +13,6 @@ app.use(bodyParser.json())
 app.get('/', function (req, res) {    
   res.send("WelCome To Pmart-Store")
 })
-
 //import The Employe List
 const employesRouter = require('./router/employeRouter')
 app.use('/employee',employesRouter)
@@ -18,7 +21,7 @@ app.use('/employee',employesRouter)
 const productRouter = require('./router/productRouter')
 app.use('/product',productRouter)
 
-//add comment
-app.listen(8000,()=>{
+
+app.listen(PORTL,()=>{
     console.log("The Server Work Succesfully")
 })
