@@ -21,7 +21,7 @@ app.use('/employee',employesRouter)
 const productRouter = require('./router/productRouter')
 app.use('/product',productRouter)
 
-
+//just cheacking
 app.listen(PORTL,()=>{
     console.log("The Server Work Succesfully")
 })

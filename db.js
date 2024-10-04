@@ -4,13 +4,14 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 
-const MongoURL = process.env.DB_URL
+const MongoURL = "mongodb://localhost:27017"
+// const MongoURL = process.env.DB_URL
 
 
 // Connect The MongoDB
  mongoose.connect(MongoURL,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
+   //  useNewUrlParser:true,
+   //  useUnifiedTopology:true
  })
 
  //Get The Defult Connection
