@@ -36,15 +36,15 @@ const employeSchema = new mongoose.Schema({
     Salary:{
         type:Number,
         required:true
-    },
-    username:{
-        required:true,
-        type:String
-    },
-    password:{
-        required:true,
-        type:String
     }
+    // username:{
+    //     required:true,
+    //     type:String
+    // },
+    // password:{
+    //     required:true,
+    //     type:String
+    // }
 })
 
 // pre is middel ware fuction is trigger when "save"  opretions we perform

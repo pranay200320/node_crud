@@ -5,7 +5,6 @@ require('dotenv').config();
 const passport = require('./auth');
 
 
-
 const PORTL = process.env.PORT || 8000;
 
 
@@ -31,7 +30,7 @@ app.get('/',function (req, res) {
 })
 //import The Employe List
 const employesRouter = require('./router/employeRouter')
-app.use('/employee',localAuth,employesRouter)
+app.use('/employee',employesRouter)
 
 // impoert The Product List
 const productRouter = require('./router/productRouter');
