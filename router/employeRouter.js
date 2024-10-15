@@ -9,20 +9,7 @@ const {jwtAuthMiddleware, generateToken} = require('./../jwt');
 // Import The Emplooye Model
 const Emplooye = require('../models/employes')
 
-// Get The Emplooyes Data
 
-router.get('/',async (req,res)=>{
-
-    try{
-        const data = await Emplooye.find()
-        console.log("Get The Emplooyes Data")
-        res.status(200).json(data)
-    }
-    catch(err){
-      console.log(err)
-      res.status(500).json({Error:"Internal Server Error"})
-    }
-  })
 
   // POST METHOD
   //now user post data in emplloye/singup
