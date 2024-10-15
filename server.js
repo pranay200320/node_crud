@@ -20,12 +20,14 @@ let logRequest = (req,res,next) =>{
 app.use(logRequest)
 
 
+//Passport.js is a popular authentication middleware for node.js authentication is the process of verifying the identity of a user,typically through a username and password before granting access to certain resources or features on a website or application
+// initialize passport
 app.use(passport.initialize())
   
 const localAuth = passport.authenticate('local',{session:false})
 
 
-app.get('/',function (req, res) {    
+app.get('/',(req, res) =>{    
   res.send("WelCome To Pmart-Store")
 })
 //import The Employe List
